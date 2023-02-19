@@ -1,0 +1,60 @@
+VERSION DEBUTANT CAD PAS OPTIMISEE
+
+PR OPTIMISER IL FAUT CREER DES FICHIERS INDEX.JS DS CHQ DOSS
+
+import { createRouter, createWebHistory } from 'vue-router'
+
+import Nosbest from '@/views/public/Nosbest.vue'
+import Nosplantes from '@/views/public/Nosplantes.vue'
+import PublicLayout from '@/views/public/PublicLayout.vue'
+
+import AdminLayout from '@/views/admin/AdminLayout.vue'
+import Dashboard from '@/views/admin/Dashboard.vue'
+
+import UserAdd from '@/views/admin/Users/UserAdd.vue'
+import UserEdit from '@/views/admin/Users/UserEdit.vue'
+import UserIndex from '@/views/admin/Users/UserIndex.vue'
+
+import PlantesEdit from '@/views/admin/Plantes/PlantesEdit.vue'
+import PlantesIndex from '@/views/admin/Plantes/PlantesIndex.vue'
+
+import notfound from '@/views/public/notfound.vue'
+
+const routes = [
+  {
+    path: '/',
+    name: 'PublicLayout',
+    component: PublicLayout,
+    children: [
+      { path: '/Nosbest', name: 'Nosbest', component: Nosbest },
+      { path: '/Nosplantes', name: 'Nosplantes', component: Nosplantes },
+    ]
+  },
+{
+    path: '/admin',
+    name: 'AdminLayout',
+    component: AdminLayout,
+      children: [
+        {path: 'Dashboard', name: 'Dashboard', component: Dashboard},
+        {path: 'Users/UserAdd', name: 'UserAdd', component: UserAdd},
+        {path: 'Users/UserEdit/:id', name: 'UserEdit', component: UserEdit},
+        {path: 'Users/UserIndex', name: 'UserIndex', component: UserIndex},
+        {path: 'Plantes/PlantesEdit', name: 'PlantesEdit', component: PlantesEdit},
+        {path: 'Plantes/PlantesIndex', name: 'PlantesIndex', component: PlantesIndex},
+        
+      ]
+},
+  {
+    path: '/:pathmatch(.*)*',
+    component: notfound
+  },
+]
+
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes
+})
+
+export default router
+
+Ds UserEdit c'est la méthode props qui est used car + courte = pas d'erreur

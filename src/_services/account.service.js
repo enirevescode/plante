@@ -11,6 +11,7 @@ let login = (credentials) => {
 
 let logout = () => {
    localStorage.removeItem('token')
+   console.log("you've been logout !!");
 }
 
 let getToken = () => {

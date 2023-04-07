@@ -23,6 +23,8 @@ Axios.interceptors.request.use(request => {
 Axios.interceptors.response.use(response =>{
    return response
 }, error => {
+   console.log(error)
+   
    if(error.response.status == 401){
       accountService.logout()
       router.push('/login')

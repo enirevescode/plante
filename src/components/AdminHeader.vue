@@ -1,19 +1,20 @@
 <template>
    <div class="head">
       Header Admin
-      <button @click="logout()">Déconnexion</button>
+      <button @click="logout()">Logout</button>
    </div>
 </template>
 
 <script>
 // pr stopper la connexion et supprimer le token :
-import { accountService } from '@/_services';
+import { accountService } from '@/_services'
+
 export default {
    name: 'AdminHeader',
    methods:{
       logout(){
          accountService.logout()
-         this.$router.push('/login')
+         this.$router.push('/')
       }
    }
 }

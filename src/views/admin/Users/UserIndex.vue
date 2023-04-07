@@ -4,7 +4,6 @@
        <table>
            <thead>
                <tr>
-                   <th>&nbsp;</th>
                    <th>ID</th>
                    <th>Nom</th>
                    <th>Prénom</th>
@@ -13,13 +12,13 @@
                </tr>
            </thead>
            <tbody>
-               <tr v-for="(user, index) in users" :key="user.id">
-                   <td><span class="del_btn" @click="del(index)">X</span></td>
-                   <td>{{ user.id }}</td>
-                   <td class="edit" @click="goEdit(user.id)">{{ user.nom }}</td>
-                   <td>{{ user.prenom }}</td>
-                   <td>{{ user.email }}</td>
-                   <td>{{ dateFormat[index] }}</td>
+            <tr v-for="(user, index) in users" :key="user.id">
+                    <td><span class="del_btn" @click="del(index)">X</span></td>
+                    <td>{{ user.id }}</td>
+                    <td class="edit" @click="goEdit(user.id)">{{ user.nom }}</td>
+                    <td>{{ user.prenom }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ dateFormat[index] }}</td>
                </tr>
            </tbody>
        </table>
@@ -48,7 +47,7 @@ export default {
    mounted(){
        userService.getAllUsers()
            .then(res => {
-               this.users = res.data.data
+                this.users = res.data.data
            })
            .catch(err => console.log(err))
    },

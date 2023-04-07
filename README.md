@@ -1,4 +1,4 @@
-# plante
+# produit
 
 ## Project setup
 ```

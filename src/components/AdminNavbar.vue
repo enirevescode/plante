@@ -5,11 +5,11 @@
          <li>&nbsp;</li>
          <li><router-link to='/admin/Dashboard'>Dashboard</router-link></li>
          <li>&nbsp;</li>
-         <li><router-link to='/admin/Users/UserIndex'>User list</router-link></li>
-         <li><router-link to='/admin/users/UserAdd'>User add</router-link></li>
+         <li><router-link to='/admin/Users/index'>User list</router-link></li>
+         <li><router-link to='/admin/Users/UserAdd'>User add</router-link></li>
          <li>&nbsp;</li>
-         <li><router-link to='/admin/Plantes/PlantesIndex'>Plantes list</router-link></li>
-         <li><router-link to='/admin/Plantes/PlantesEdit'>Plantes add</router-link></li>
+         <li><router-link to='/admin/Produits/index'>Plantes list</router-link></li>
+         <li><router-link to='/admin/Produits/edit'>Plantes add</router-link></li>
   </ul>
 </div>
 </template>

@@ -1,6 +1,6 @@
 //fichier qui va gérer axios qui dispose d'outils + adaptés pr gérer la com avec api et le système d'authentification
 //c'est 1 client web
-/* import des modules né<cessaires>*/
+/* import des modules né<cessaires*/
 
 import axios from 'axios'
 import { accountService} from '@/_services'

@@ -1,13 +1,5 @@
 <template>
-   <!--  <nav>
-   <img v-bind:src="require('@/assets/logo.png')" />
-   <router-link to="/">ACCUEIL</router-link> |
-   <router-link to="/Nosbest">NOS MEILLEURES VENTES</router-link> |
-   <router-link to="/Nosplantes">NOS PLANTES</router-link> |
-   <router-link to="/Contact">Contact</router-link> |
-   <router-link to="/admin/Dashboard">Admin</router-link> |
-   <router-link to="/login">Connexion</router-link>
- </nav> -->
+  
    <div>
       <v-toolbar :color="'green-lighten-4'" dark prominent height="150">
          <v-app-bar-nav-icon></v-app-bar-nav-icon>
